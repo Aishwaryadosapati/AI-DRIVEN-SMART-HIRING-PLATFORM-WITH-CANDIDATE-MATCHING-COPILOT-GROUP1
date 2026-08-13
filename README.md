@@ -230,3 +230,40 @@ AI-DRIVEN-SMART-HIRING-PLATFORM/
 ├── .gitignore
 ├── LICENSE
 └── README.md
+
+
+
+## 📸 Application Screenshots
+
+### 🏠 Dashboard
+![Dashboard](SCREENSHOTS/dashboard.png)
+
+### 💼 Job Management
+![Job Management](SCREENSHOTS/job_management.png)
+
+### 📄 Resume Management
+![Resume Management](SCREENSHOTS/resume_management.png)
+
+### 👤 Candidate Profile
+![Candidate Profile](SCREENSHOTS/candidate_profile.png)
+
+### 🎯 Resume Matching
+![Resume Matching](SCREENSHOTS/resume_matching.png)
+
+### 🎤 Interview Management
+![Interview Management](SCREENSHOTS/interview_management.png)
+
+### 🤖 AI Copilot
+![AI Copilot](SCREENSHOTS/copilot.png)
+
+### 💬 Resume Chat
+![Resume Chat](SCREENSHOTS/resume_chat.png)
+
+### 👥 Employee Management
+![Employee Management](SCREENSHOTS/employee_management.png)
+
+### 🚀 Onboarding
+![Onboarding](SCREENSHOTS/onboarding.png)
+
+### 🎯 Talent Management
+![Talent Management](SCREENSHOTS/talent_management.png)
