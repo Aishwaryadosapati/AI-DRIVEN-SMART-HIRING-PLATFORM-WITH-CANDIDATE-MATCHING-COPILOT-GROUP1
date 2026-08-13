@@ -19,3 +19,6 @@ resumes/
 
 .DS_Store
 Thumbs.db
+
+
+*.sqbpro
