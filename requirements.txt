@@ -4,5 +4,5 @@ pandas
 plotly
 pdfplumber
 pymupdf
-sqlite3
 python-dotenv
+requests
