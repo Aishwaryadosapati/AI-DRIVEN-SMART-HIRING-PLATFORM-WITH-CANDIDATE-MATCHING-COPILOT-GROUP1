@@ -174,16 +174,25 @@ def show():
 
         match_score = parsed["score"]
 
+# Convert AI score to number
+        try:
+            match_score = float(match_score)
+        except (ValueError, TypeError):
+            match_score = 0.0
+
+# Keep score between 0 and 100
+        match_score = max(0.0, min(match_score, 100.0))
+
         st.metric(
             "🎯 Match Score",
-            f"{match_score}%"
+            f"{match_score:.0f}%"
         )
 
-        # ==========================================
-        # Match Progress
-        # ==========================================
+# ==========================================
+# Match Progress
+# ==========================================
 
-        st.progress(match_score / 100)
+        st.progress(match_score / 100)    
 
         st.divider()
 
@@ -261,7 +270,7 @@ def show():
 
         c3.metric(
             "Match Score",
-            f"{match_score}%"
+            f"{match_score:.0f}%"
         )
 
 
@@ -305,21 +314,26 @@ def show():
 
         col1.metric(
             "Match Score",
-            f"{match_score}%"
+            f"{match_score:.0f}%"
         )
 
-        if match_score >= job["minimum_ats_score"]:
+# Convert minimum ATS score to number
+        try:
+            minimum_ats = float(job["minimum_ats_score"])
+        except (ValueError, TypeError):
+            minimum_ats = 0
+
+        if match_score >= minimum_ats:
 
             st.success(
-                f"✅ Candidate cleared ATS Cutoff ({job['minimum_ats_score']}%)"
-            )
+            f"✅ Candidate cleared ATS Cutoff ({minimum_ats:.0f}%)"
+        )
 
         else:
 
             st.error(
-                f"❌ Candidate failed ATS Cutoff ({job['minimum_ats_score']}%)"
+                f"❌ Candidate failed ATS Cutoff ({minimum_ats:.0f}%)"
             )
-
         
         col2.metric(
             "Matched Skills",
@@ -344,7 +358,9 @@ def show():
 
         st.subheader("🚀 Next Steps")
 
-        if match_score >= job["minimum_ats_score"]:
+        
+
+        if match_score >= minimum_ats:
 
             st.success(
                 "✅ Candidate meets the minimum ATS requirement."
@@ -379,7 +395,7 @@ def show():
 
         col1.metric(
             "Match Score",
-            f"{match_score}%"
+            f"{match_score:.0f}%"
         )
 
         col2.metric(
@@ -395,6 +411,6 @@ def show():
         col4.metric(
             "Qualification",
             "Qualified"
-            if match_score >= job["minimum_ats_score"]
+            if match_score >= minimum_ats
             else "Not Qualified"
         )
