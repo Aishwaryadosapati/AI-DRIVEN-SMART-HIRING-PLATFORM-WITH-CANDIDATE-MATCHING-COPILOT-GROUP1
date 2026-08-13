@@ -1,0 +1,8 @@
+streamlit
+ollama
+pandas
+plotly
+pdfplumber
+pymupdf
+sqlite3
+python-dotenv
