@@ -31,7 +31,7 @@ from utils.database import create_tables
 
 
 st.set_page_config(
-    page_title="AI Recruitment & Talent Management Copilot",
+    page_title="AI DRIVEN SMART HIRING PLATFORM WITH CANDIDATE MATCHING COPILOT GROUP1",
     page_icon="🤖",
     layout="wide"
 )
@@ -56,14 +56,14 @@ if not st.session_state.logged_in:
 
 st.markdown("""
 <div class="main-title">
-<h1>🤖 AI Recruitment & Talent Management Copilot</h1>
+<h1>🤖 AI DRIVEN SMART HIRING PLATFORM WITH CANDIDATE MATCHING COPILOT GROUP1</h1>
 <h4>Smart AI Hiring Assistant</h4>
 </div>
 """, unsafe_allow_html=True)
 
 # Sidebar
 st.sidebar.image("assets/logo.png", width=130)
-st.sidebar.title("🤖 AI Recruitment")
+st.sidebar.title("🤖 AI DRIVEN SMART HIRING PLATFORM")
 st.sidebar.success("✅ Logged in as Recruiter")
 
 page = st.sidebar.radio(
